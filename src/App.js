@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import About from './components/About';
 import Nav from './components/Nav'
+import About from './components/About';
 import Gallery from './components/Gallery';
 import ContactForm from './components/Contact';
 
 function App() {
-  // lifting from Nav
   const [categories] = useState([
     {
       name: 'commercial',
@@ -17,8 +16,6 @@ function App() {
   ]);
 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
-
-  // contact form is not initially shown, gallery is 
   const [contactSelected, setContactSelected] = useState(false);
 
   return (
